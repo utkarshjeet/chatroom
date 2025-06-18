@@ -2,6 +2,11 @@
 let socket;
 let currentUser = {};
 
+// Backend URL - CHANGE THIS TO YOUR BACKEND URL WHEN DEPLOYING
+// For local development: leave as is
+// For production: replace with your backend URL (e.g., 'https://your-app.onrender.com')
+const BACKEND_URL = 'https://chatroom-hbfo.onrender.com';
+
 // Simple path detection
 const currentPath = window.location.pathname;
 const isHomePage = currentPath === '/' || currentPath === '/index.html' || currentPath === '' || currentPath.includes('index');
@@ -111,7 +116,7 @@ if (isChatPage) {
 
         function initializeSocket() {
             // Connect to Socket.IO server
-            socket = io();
+            socket = io(BACKEND_URL);
 
             // Connection events
             socket.on('connect', () => {
