@@ -5,7 +5,7 @@ let currentUser = {};
 // Backend URL - CHANGE THIS TO YOUR BACKEND URL WHEN DEPLOYING
 // For local development: leave as is
 // For production: replace with your backend URL (e.g., 'https://your-app.onrender.com')
-const BACKEND_URL = 'https://your-backend-url.onrender.com';
+const BACKEND_URL = 'https://chatroom-hbfo.onrender.com';
 
 // Simple path detection
 const currentPath = window.location.pathname;
