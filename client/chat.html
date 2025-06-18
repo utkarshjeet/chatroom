@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="messages" id="messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        
+        <div class="input-area">
+            <div class="emoji-picker">
+                <button id="emojiBtn" class="emoji-btn">😊</button>
+                <div class="emoji-dropdown" id="emojiDropdown">
+                    <div class="emoji-grid">
+                        <span class="emoji" data-emoji="😊">😊</span>
+                        <span class="emoji" data-emoji="😂">😂</span>
+                        <span class="emoji" data-emoji="❤️">❤️</span>
+                        <span class="emoji" data-emoji="👍">👍</span>
+                        <span class="emoji" data-emoji="🎉">🎉</span>
+                        <span class="emoji" data-emoji="🔥">🔥</span>
+                        <span class="emoji" data-emoji="😎">😎</span>
+                        <span class="emoji" data-emoji="🤔">🤔</span>
+                        <span class="emoji" data-emoji="😭">😭</span>
+                        <span class="emoji" data-emoji="👋">👋</span>
+                        <span class="emoji" data-emoji="💯">💯</span>
+                        <span class="emoji" data-emoji="✨">✨</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-input-container">
+                <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500">
+                <button id="sendBtn" class="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
